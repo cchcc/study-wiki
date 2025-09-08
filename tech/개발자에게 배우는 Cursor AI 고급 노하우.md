@@ -72,3 +72,60 @@ https://fastcampus.co.kr/classroom/255142
 - instructions, system prompt
 - user prompt
 
+# 보안
+- outbound: 내부 정보를 외부로 유출함
+  - 최소한의 권한부여
+  - 민감한 파일에는 명시적으로 접근 금지
+  - 데이터 마스킹
+- inbound: 취약점을 내부에 적용시켜버림
+  - 보안 코딩 가이드 주입
+  - 외부 라이브러리를 아무거나 가져오는게 아니라 승인된 것들만 사용하도록
+  - 보안 검증 절차를 주입(소나큐브 통과)
+
+# Cursor
+
+개발할때 전달하는 맥락 6가지
+- 요구사항
+- 수정해야할 소스 코드
+- 연관된 소스코드
+- 라이브러리 & 프레임웤의 문서
+- 동작 과정, 절차
+- 코드 작성 규칙, 컨벤션
+
+맥락에도 생명주기가 있음
+실시간 동작을 눈으로 확인 가능
+context 구조화가 용이 하다
+
+# mcp
+## 구조
+mcp server <-> mcp <-> mcp client(cursor)
+
+## mcp 가 하는일
+- Collet: 맥락을 가져오기
+- Action: 결과를 실행
+
+## mcp type
+local mcp: 로컬에 띄워놓고 연결해서 사용. 주로 node, python 사용 
+remote mcp
+
+https://smithery.ai/
+- mcp 모음
+
+https://cursor.directory/
+- rules 모음
+
+
+# rules
+- insruction 의 일부로 적용함
+- 작은 크기로 지시사항을 지정하기 위해(요금제와 관련이)
+
+## user rules
+- 계정에 설저되는 룰
+- 개인적인 워크 플로우
+
+## project rules
+- 플젝별 아키텍쳐, 개발철학, 컨벤션, 기술스택
+
+system prompt + user rules + user promt: 이렇게 3가지가 하나로 묶임
+project rulse: 상황에 따라 선택, 적용
+
